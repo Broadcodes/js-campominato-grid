@@ -11,7 +11,19 @@ const button = document.getElementById("play");
 
 // Aggiungo l'evento al pulsante button
 button.addEventListener("click", function(){
+    const MAX_CELL = 100;
 
-    console.log("ok");
+    // Recupero l'elemento "grid" dall'HTML
+    const grid = document.getElementById("grid");
+    
+    grid.innerHTML = "";
+
+    // Creo l'elemento "cell", ciclandolo 100 volte
+    for(let i = 0; i < MAX_CELL; i++){
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.innerHTML = i + 1;
+        grid.append(cell);
+    }
 
 });
