@@ -32,6 +32,9 @@ button.addEventListener("click", function () {
             } else {
                 cell.classList.add("green");
             }
+
+            // Visualizzo il messaggio in console della cella cliccata
+            console.log(`La cella selezionata ha il numero: ${i}`);
         });
 
         grid.append(cell);
