@@ -10,7 +10,7 @@ di verde se dispari. Inoltre emette un messaggio in console con il numero della 
 const button = document.getElementById("play");
 
 // Aggiungo l'evento al pulsante button
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
     const MAX_CELL = 100;
 
     // Recupero l'elemento "grid" dall'HTML
@@ -25,13 +25,9 @@ button.addEventListener("click", function () {
         cell.innerHTML = i;
 
         // Aggiungo l'evento sulla cella al click
-        cell.addEventListener("click", function () {
+        cell.addEventListener("click", () => {
             // Verifico la condizione numero pari o dispari per colorare la cella
-            if (i % 2 === 0) {
-                cell.classList.add("aqua");
-            } else {
-                cell.classList.add("green");
-            }
+            isEvenOrOdd(i, cell);
 
             // Visualizzo il messaggio in console della cella cliccata
             console.log(`La cella selezionata ha il numero: ${i}`);
@@ -41,3 +37,11 @@ button.addEventListener("click", function () {
     }
 
 });
+
+function isEvenOrOdd(index, element){
+    if (index % 2 === 0) {
+        element.classList.add("aqua");
+    } else {
+        element.classList.add("green");
+    }
+}
