@@ -30,6 +30,29 @@ button{
     border: 2px solid rgb(200, 200, 200);
 }
 
+main{
+    height: calc(100vh - 150px);
+}
+
+main .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100vh + 2px);
+    height: 100%;
+}
+
+#cell{
+    width: calc(100vh / 10);
+    height: calc(100vh / 10);
+    border: 1px solid black;
+}
+
 footer p{
     font-weight: bold;
 }
