@@ -7,3 +7,24 @@
 body {
     font-family: sans-serif;
 }
+
+header{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 80px;
+    height: 23px;
+    border-radius: 5px;
+    border: 2px solid rgb(200, 200, 200);
+}
