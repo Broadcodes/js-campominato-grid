@@ -10,19 +10,30 @@ di verde se dispari. Inoltre emette un messaggio in console con il numero della 
 const button = document.getElementById("play");
 
 // Aggiungo l'evento al pulsante button
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
     const MAX_CELL = 100;
 
     // Recupero l'elemento "grid" dall'HTML
     const grid = document.getElementById("grid");
-    
+
     grid.innerHTML = "";
 
     // Creo l'elemento "cell", ciclandolo 100 volte
-    for(let i = 0; i < MAX_CELL; i++){
+    for (let i = 1; i <= MAX_CELL; i++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.innerHTML = i + 1;
+        cell.innerHTML = i;
+
+        // Aggiungo l'evento sulla cella al click
+        cell.addEventListener("click", function () {
+            // Verifico la condizione numero pari o dispari per colorare la cella
+            if (i % 2 === 0) {
+                cell.classList.add("aqua");
+            } else {
+                cell.classList.add("green");
+            }
+        });
+
         grid.append(cell);
     }
 

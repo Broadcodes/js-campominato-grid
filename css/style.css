@@ -57,6 +57,14 @@ main .container{
     align-items: center;
 }
 
+.aqua{
+    background-color: aqua;
+}
+
+.green{
+    background-color: greenyellow;
+}
+
 footer p{
     font-weight: bold;
 }
