@@ -27,7 +27,13 @@ button.addEventListener("click", () => {
         // Aggiungo l'evento sulla cella al click
         cell.addEventListener("click", () => {
             // Verifico la condizione numero pari o dispari per colorare la cella
-            isEvenOrOdd(i, cell);
+            let isEven = isEvenOrOdd(i);
+
+            if(isEven){
+                cell.classList.add("aqua");
+            } else {
+                cell.classList.add("green");
+            }
 
             // Visualizzo il messaggio in console della cella cliccata
             console.log(`La cella selezionata ha il numero: ${i}`);
@@ -38,10 +44,9 @@ button.addEventListener("click", () => {
 
 });
 
-function isEvenOrOdd(index, element){
+function isEvenOrOdd(index){
     if (index % 2 === 0) {
-        element.classList.add("aqua");
-    } else {
-        element.classList.add("green");
+        return true;
     }
+    return false;
 }
